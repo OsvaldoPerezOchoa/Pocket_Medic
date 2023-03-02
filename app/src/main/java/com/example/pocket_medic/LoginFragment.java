@@ -30,11 +30,11 @@ public class LoginFragment extends Fragment {
         //Hacemos que un edittext sirva como un boton que nos lleve a un formulario de registro
         txt_regis.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent intent = new Intent();
+            public void onClick(View vista) {
+                Intent intent = new Intent(getActivity(),RegistroActivity.class);
+                startActivity(intent);
             }
         });
-
         return vista;
     }
 }
