@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Pocket Medic</string>
+    <string name="abrir_nav">Abrir Barra de Navegación</string>
+    <string name="cerrar_nav">Cerrar Barra de Navegación</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
