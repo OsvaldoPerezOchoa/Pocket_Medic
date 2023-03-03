@@ -5,6 +5,8 @@ import android.os.Bundle;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -43,59 +45,60 @@ public class LoginFragment extends Fragment {
         txt_password = (EditText)vista.findViewById(R.id.edtPassword);
         btn_validar = (Button)vista.findViewById(R.id.btnLogin);
 
-        //invocamos el metodo validar
-        btn_validar.setOnClickListener(new View.OnClickListener() {
+
+        //Hacemos que un edittext sirva como un boton que nos lleve a un formulario de registro
+        txt_regis.setOnClickListener(new View.OnClickListener()
+        {
             @Override
-            public void onClick(View view) {
-                Validar("https://172.0.0.1/PocketMedic/login.php");
+            public void onClick(View vista) {
+                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                FragmentTransaction transaction = fragmentManager.beginTransaction();
+                transaction.setReorderingAllowed(true);
+
+                transaction.replace(R.id.fragment_container,RegistroFragment.class,null);
+                transaction.commit();
             }
         });
 
-        //Hacemos que un edittext sirva como un boton que nos lleve a un formulario de registro
-        txt_regis.setOnClickListener(new View.OnClickListener() {
+        btn_validar.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View vista) {
-                Intent intent = new Intent(getActivity(),RegistroFragment.class);
-                startActivity(intent);
+            public void onClick(View view) {
+                validarusuario("http://192.168.0.18/PocketMedic/login.php");
             }
         });
         return vista;
     }
 
-    private void Validar(String URL)
+    private void validarusuario(String URL)
     {
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>()
-        {
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
             @Override
-            public void onResponse(String response)
-            {
+            public void onResponse(String response) {
                 if(!response.isEmpty())
                 {
-                    Intent intent = new Intent(getActivity(),LogoutFragment.class);
+                    Intent intent =  new Intent(getActivity(),LogincomplActivity.class);
                     startActivity(intent);
                 }
                 else
                 {
-                    Toast.makeText(getActivity(), "correo o contraseña incorrecot",
-                            Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(),"Correo o Contraseña incorrecta",Toast.LENGTH_SHORT).show();
                 }
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Toast.makeText(getActivity(),error.toString(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(),error.toString(),Toast.LENGTH_SHORT).show();
             }
         }){
-            @Nullable
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
-                Map<String,String> parametros = new HashMap<>();
+                Map<String,String> parametros = new HashMap<String,String>();
                 parametros.put("correo",txt_usuario.getText().toString());
                 parametros.put("contrasena",txt_password.getText().toString());
                 return parametros;
             }
         };
-        RequestQueue requestQueue = Volley.newRequestQueue(getContext());
+        RequestQueue requestQueue = Volley.newRequestQueue(getActivity());
         requestQueue.add(stringRequest);
     }
 }
