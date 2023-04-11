@@ -63,7 +63,7 @@ public class LoginFragment extends Fragment {
         btn_validar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                validarusuario("http://192.168.0.18/PocketMedic/login.php");
+                validarusuario("http://172.16.13.203/PocketMedic/login.php");
             }
         });
         return vista;
@@ -76,7 +76,7 @@ public class LoginFragment extends Fragment {
             public void onResponse(String response) {
                 if(!response.isEmpty())
                 {
-                    Intent intent =  new Intent(getActivity(),LogincomplActivity.class);
+                    Intent intent =  new Intent(getActivity(),MainActivity.class);
                     startActivity(intent);
                 }
                 else
