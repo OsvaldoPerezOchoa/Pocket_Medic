@@ -31,7 +31,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
-            android:text="Pocket Medic"
+            android:text="Seleccione su problema que desea tratar"
             android:textColor="@color/lavender"
             android:textSize="14sp"
             app:layout_constraintEnd_toStartOf="@+id/logoimage"
@@ -60,7 +60,7 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:id="@+id/clothingCard"
+                android:id="@+id/migranaCard"
                 android:layout_margin="10dp"
                 android:layout_weight="1"
                 app:cardElevation="20dp"
