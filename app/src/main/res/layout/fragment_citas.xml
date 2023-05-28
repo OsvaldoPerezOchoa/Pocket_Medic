@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fondop"
     tools:context=".CitasFragment">
 
     <!-- TODO: Update blank fragment layout -->
@@ -16,7 +17,7 @@
             android:layout_width="266dp"
             android:layout_height="61dp"
             android:text="Agende una cita médica"
-            android:textColor="@color/lavender"
+            android:textColor="@color/black"
             android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -29,7 +30,7 @@
             android:id="@+id/imageView4"
             android:layout_width="91dp"
             android:layout_height="83dp"
-            android:src="@drawable/logo"
+            android:src="@drawable/logofinal"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.703"

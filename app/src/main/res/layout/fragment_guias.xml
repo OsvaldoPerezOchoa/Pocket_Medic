@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fondop"
     tools:context=".MainActivity">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -19,7 +20,7 @@
             android:layout_marginStart="18dp"
             android:layout_marginTop="40dp"
             android:text="Guías"
-            android:textColor="@color/lavender"
+            android:textColor="@color/black"
             android:textSize="40sp"
 
             app:layout_constraintEnd_toStartOf="@+id/logoimage"
@@ -32,7 +33,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
             android:text="Seleccione su problema que desea tratar"
-            android:textColor="@color/lavender"
+            android:textColor="@color/black"
             android:textSize="14sp"
             app:layout_constraintEnd_toStartOf="@+id/logoimage"
             app:layout_constraintStart_toStartOf="parent"
@@ -41,7 +42,7 @@
             android:layout_width="0dp"
             android:layout_height="160dp"
             android:id="@+id/logoimage"
-            android:src="@drawable/logo"
+            android:src="@drawable/logofinal"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="16dp"

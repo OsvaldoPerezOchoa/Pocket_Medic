@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fondop"
     tools:context=".UsuarioFragment">
 
     <!-- TODO: Update blank fragment layout -->
@@ -16,7 +17,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Usuario"
-            android:textColor="@color/lavender"
+            android:textColor="@color/black"
             android:textSize="60sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -29,7 +30,7 @@
             android:id="@+id/imageView3"
             android:layout_width="91dp"
             android:layout_height="83dp"
-            android:src="@drawable/logo"
+            android:src="@drawable/logofinal"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.678"

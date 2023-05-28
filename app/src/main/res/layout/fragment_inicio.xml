@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fondop"
     tools:context=".InicioFragment">
 
     <!-- TODO: Update blank fragment layout -->
@@ -15,27 +16,26 @@
             android:id="@+id/tituloInicio"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Inicio"
-            android:textColor="@color/lavender"
-            android:textSize="60sp"
+            android:text="Bienvenido a pocket Medic"
+            android:textColor="@color/black"
+            android:textSize="30sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.166"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.043" />
+            app:layout_constraintVertical_bias="0.543" />
 
         <ImageView
             android:id="@+id/imageView2"
-            android:layout_width="91dp"
-            android:layout_height="83dp"
-            android:src="@drawable/logo"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="195dp"
+            android:layout_height="200dp"
+            android:src="@drawable/logofinal"
+            app:layout_constraintBottom_toTopOf="@+id/tituloInicio"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.688"
-            app:layout_constraintStart_toEndOf="@+id/tituloInicio"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.044" />
+            app:layout_constraintVertical_bias="1.0" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>
