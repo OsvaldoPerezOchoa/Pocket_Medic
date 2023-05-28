@@ -3,7 +3,6 @@ package com.example.pocket_medic;
 import android.content.Intent;
 import android.os.Bundle;
 
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -24,7 +23,6 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
-import java.lang.ref.ReferenceQueue;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -41,8 +39,8 @@ public class LoginFragment extends Fragment {
         View vista = inflater.inflate(R.layout.fragment_login, container, false);
 
         txt_regis = (TextView)vista.findViewById(R.id.lbl_regis);
-        txt_usuario = (EditText)vista.findViewById(R.id.edtUsuario);
-        txt_password = (EditText)vista.findViewById(R.id.edtPassword);
+        txt_usuario = (EditText)vista.findViewById(R.id.reg_usuario);
+        txt_password = (EditText)vista.findViewById(R.id.reg_contra);
         btn_validar = (Button)vista.findViewById(R.id.btnLogin);
 
 
