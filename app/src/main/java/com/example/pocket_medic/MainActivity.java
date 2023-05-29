@@ -53,10 +53,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         new CitasFragment()).commit();
                 break;
 
-            case R.id.nav_telefonos:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new TelefonosFragment()).commit();
-                break;
+
 
             case R.id.nav_guias:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
@@ -73,10 +70,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         new UsuarioFragment()).commit();
                 break;
 
-            case R.id.nav_direcciones:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new DireccionesFragment()).commit();
-                break;
+
 
             case R.id.nav_login:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,

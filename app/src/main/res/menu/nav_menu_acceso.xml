@@ -29,15 +29,7 @@
             android:icon="@drawable/nav_recetas"
             android:title="Receta"/>
 
-        <item
-            android:id="@+id/nav_telefonos"
-            android:icon="@drawable/nav_telefonos"
-            android:title="Numeros de Emergencia"/>
 
-        <item
-            android:id="@+id/nav_direcciones"
-            android:icon="@drawable/nav_direcciones"
-            android:title="Direcciones"/>
 
     </group>
 
