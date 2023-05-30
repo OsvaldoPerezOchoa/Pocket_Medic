@@ -21,10 +21,10 @@
             android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.11"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.024" />
+            app:layout_constraintVertical_bias="0.043" />
 
         <ImageView
             android:id="@+id/imageView4"
@@ -37,6 +37,49 @@
             app:layout_constraintStart_toEndOf="@+id/tituloCitas"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.024" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="274dp"
+            android:layout_height="92dp"
+            android:justificationMode="inter_word"
+            android:text="Aquí aparecerán las citas que registres, si ves este mensaje es porque aún no has registrado ninguna."
+            android:textSize="15sp"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tituloCitas"
+            app:layout_constraintVertical_bias="0.417" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="55dp"
+            android:layout_height="54dp"
+            android:layout_marginBottom="48dp"
+            android:background="@drawable/circulo_btn"
+            app:icon="@drawable/ic_enviar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.918"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView4"
+            android:contentDescription="Boton para añadir cita"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ImageView
+            android:id="@+id/imageView14"
+            android:layout_width="295dp"
+            android:layout_height="406dp"
+            android:alpha="0.2"
+            android:src="@drawable/receta"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tituloCitas"
+            app:layout_constraintVertical_bias="0.357" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>

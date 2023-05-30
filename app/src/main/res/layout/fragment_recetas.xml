@@ -37,6 +37,49 @@
             app:layout_constraintStart_toEndOf="@+id/tituloRecetas"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.024" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="55dp"
+            android:layout_height="54dp"
+            android:background="@drawable/circulo_btn"
+            android:contentDescription="Boton para añadir receta"
+            app:icon="@drawable/ic_enviar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.921"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView5"
+            app:layout_constraintVertical_bias="0.915" />
+
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="260dp"
+            android:layout_height="92dp"
+            android:justificationMode="inter_word"
+            android:text="Aquí aparecerán las recetas que registres, si ves este mensaje es porque aún no has registrado ninguna."
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tituloRecetas"
+            app:layout_constraintVertical_bias="0.425" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="262dp"
+            android:layout_height="354dp"
+            android:alpha="0.2"
+            android:src="@drawable/cita"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tituloRecetas" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>
