@@ -25,4 +25,14 @@
             android:id="@+id/action_SecondFragment_to_FirstFragment"
             app:destination="@id/FirstFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/fragmentA"
+        android:name="com.example.pocket_medic.RecetasFragment"
+        android:label="Fragment A"
+        tools:layout="@layout/fragment_recetas" />
+    <fragment
+        android:id="@+id/fragmentB"
+        android:name="com.example.pocket_medic.CrearecetaFragment"
+        android:label="Fragment B"
+        tools:layout="@layout/fragment_creareceta" />
 </navigation>

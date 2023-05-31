@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondop"
+    tools:context=".CitasFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tituloCitas"
+            android:layout_width="266dp"
+            android:layout_height="61dp"
+            android:text="Agende una cita médica"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.11"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.043" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="91dp"
+            android:layout_height="83dp"
+            android:src="@drawable/logofinal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.703"
+            app:layout_constraintStart_toEndOf="@+id/tituloCitas"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.024" />
+
+        <ImageView
+            android:id="@+id/imageView14"
+            android:layout_width="295dp"
+            android:layout_height="406dp"
+            android:alpha="0.2"
+            android:src="@drawable/receta"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tituloCitas" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="353dp"
+            android:layout_height="370dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tituloCitas"
+            app:layout_constraintVertical_bias="0.344">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Doctor"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editTextName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="Boton para añadir nombre de medicamento"
+                android:inputType="text"
+                android:minHeight="48dp"
+                tools:ignore="EditableContentDescCheck" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Motivo"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editTextName2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="Boton para añadir dósis"
+                android:inputType="text"
+                android:minHeight="48dp"
+                tools:ignore="EditableContentDescCheck" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lugar"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editTextName3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="Boton para añadir frecuencia"
+                android:inputType="text"
+                android:minHeight="48dp"
+                tools:ignore="EditableContentDescCheck" />
+
+            <EditText
+                android:id="@+id/editTextFecha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:hint="Selecciona una fecha"
+                android:inputType="none"
+                android:minHeight="48dp"
+                android:onClick="showDatePickerDialog" />
+
+            <Button
+                android:id="@+id/buttonDatePicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="showDatePickerDialog"
+                android:text="Seleccionar Fecha" />
+
+            <Button
+                android:id="@+id/buttonSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="52dp"
+                android:text="Agendar"
+                tools:ignore="TouchTargetSizeCheck" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
