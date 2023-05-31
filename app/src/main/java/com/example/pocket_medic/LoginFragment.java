@@ -1,6 +1,9 @@
 package com.example.pocket_medic;
 
+import android.app.backup.SharedPreferencesBackupHelper;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -31,6 +34,7 @@ public class LoginFragment extends Fragment {
     private TextView txt_regis;
     private EditText txt_usuario,txt_password;
     private Button btn_validar;
+    String usuario,contrasena;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -42,6 +46,8 @@ public class LoginFragment extends Fragment {
         txt_usuario = (EditText)vista.findViewById(R.id.reg_usuario);
         txt_password = (EditText)vista.findViewById(R.id.reg_contra);
         btn_validar = (Button)vista.findViewById(R.id.btnLogin);
+
+        recup();
 
 
         //Hacemos que un edittext sirva como un boton que nos lleve a un formulario de registro
@@ -61,8 +67,18 @@ public class LoginFragment extends Fragment {
         btn_validar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                validarusuario("http://172.16.13.203/PocketMedic/login.php");
-            }
+                usuario = txt_usuario.getText().toString();
+                contrasena = txt_password.getText().toString();
+
+                if(!usuario.isEmpty() && !contrasena.isEmpty())
+                {
+                    validarusuario("http:/172.16.8.31/pocketmedic/validar_usuario.php");
+                }
+                else
+                {
+                    Toast.makeText(getActivity(),"No se permiten campos vacios",Toast.LENGTH_SHORT).show();
+                }
+             }
         });
         return vista;
     }
@@ -74,8 +90,10 @@ public class LoginFragment extends Fragment {
             public void onResponse(String response) {
                 if(!response.isEmpty())
                 {
+                    guardarpref();
                     Intent intent =  new Intent(getActivity(),MainActivity.class);
                     startActivity(intent);
+                    requireActivity().onBackPressed();
                 }
                 else
                 {
@@ -91,12 +109,26 @@ public class LoginFragment extends Fragment {
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String,String> parametros = new HashMap<String,String>();
-                parametros.put("correo",txt_usuario.getText().toString());
-                parametros.put("contrasena",txt_password.getText().toString());
+                parametros.put("usuario",usuario);
+                parametros.put("contrasena",contrasena);
                 return parametros;
             }
         };
         RequestQueue requestQueue = Volley.newRequestQueue(getActivity());
         requestQueue.add(stringRequest);
+    }
+
+    private void guardarpref(){
+        SharedPreferences preferences = getActivity().getSharedPreferences( "preferenciaLogin", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putString("usuario",usuario);
+        editor.putString("contrasena",contrasena);
+        editor.putBoolean("sesion",true);
+        editor.commit();
+    }
+    private void recup(){
+        SharedPreferences preferences = getActivity().getSharedPreferences( "preferenciaLogin", Context.MODE_PRIVATE);
+        txt_usuario.setText(preferences.getString("usuario",""));
+        txt_password.setText(preferences.getString("contrasena", ""));
     }
 }
