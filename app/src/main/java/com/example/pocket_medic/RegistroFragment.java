@@ -48,7 +48,7 @@ public class RegistroFragment extends Fragment {
         btn_registro = (Button)view.findViewById(R.id.btn_registro);
         txt_back = (TextView)view.findViewById(R.id.txt_back);
 
-        //Hacemos que un edittext sirva como un boton que nos lleve a un formulario de registro
+        //Hacemos que un edittesxt sirva como un boton que nos lleve a un formulario de registro
         txt_back.setOnClickListener(new View.OnClickListener()
         {
             @Override
